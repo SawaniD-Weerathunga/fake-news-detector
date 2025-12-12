@@ -1,3 +1,22 @@
-venv/ 
-__pycache__/ 
-.DS_Store 
+# Ignore model checkpoints
+models/bert/
+models/*.pkl
+models/*.joblib
+models/*.pt
+models/*.bin
+models/*.safetensors
+
+# Ignore processed datasets
+data/processed/
+data/raw/*.csv
+
+# Ignore virtual environment
+.venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore large huggingface files
+*.h5
+*.hdf5
