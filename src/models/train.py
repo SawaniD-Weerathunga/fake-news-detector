@@ -42,7 +42,7 @@ def vectorize(train_texts, test_texts):
 
 
 def train_model(X_train, y_train):
-    model = LogisticRegression(max_iter=500)
+    model = LogisticRegression(max_iter=1000, class_weight="balanced")
     model.fit(X_train, y_train)
 
     joblib.dump(model, "models/baseline_logreg.joblib")

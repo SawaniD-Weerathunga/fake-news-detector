@@ -51,10 +51,17 @@ vectorizer = joblib.load(VECTORIZER_PATH)
 X_train = vectorizer.transform(df_train["clean_text"])
 X_test = vectorizer.transform(df_test["clean_text"])
 
-# =============================
-# PREDICT
-# =============================
-preds = model.predict(X_test)
+# -----------------------------
+# PREDICT (CUSTOM THRESHOLD)
+# -----------------------------
+probs = model.predict_proba(X_test)[:, 1]  # Probability of FAKE
+preds = (probs > 0.35).astype(int)
+
+print("\nProbability diagnostics:")
+print("Min prob:", probs.min())
+print("Max prob:", probs.max())
+print("Mean prob:", probs.mean())
+
 
 # =============================
 # BUILD ERROR DATAFRAME (NO INDEX BUGS)
