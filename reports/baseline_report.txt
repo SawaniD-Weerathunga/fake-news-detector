@@ -9,12 +9,12 @@ Classification Report:
 weighted avg       0.99      0.99      0.99      6735
 
 
-ROC-AUC: 0.9992
-Accuracy: 0.9884
-Precision: 0.9825
-Recall: 0.9935
-F1 Score: 0.9879
+ROC-AUC: 0.9993
+Accuracy: 0.9892
+Precision: 0.9837
+Recall: 0.9938
+F1 Score: 0.9887
 
 Confusion Matrix:
-[[3465   57]
- [  21 3192]]
+[[3469   53]
+ [  20 3193]]
