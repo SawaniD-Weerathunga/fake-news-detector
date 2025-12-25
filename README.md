@@ -169,7 +169,7 @@ Long fake and real news articles were used to:
    - Cloud hosting
 
 
-Author
+## Author
 
 Sawani Weerathunga
 
